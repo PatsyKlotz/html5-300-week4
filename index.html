@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
+
+ jQuery CDN link....  
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <!--<meta name="viewport" content="initial-scale=1.0">-->
+    <meta charset="UTF-8">	
+    <title>HTML5 300: Week Four</title>  
+    <!-- link to an external style sheet (best practice with style sheet)-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="javascript/script.js"></script>
+</head>
+  <body class="page"><!-- everything that is visual goes in the body tag  -->
+    <header>
+        <!-- the "banner" area or title of the page-->
+        <h1>HTML5 300: Week Four</h1> <!-- only h1 per page (for SEO purposes) --> 	
+    </header>
+      <nav class="nav1"> 
+        <ul>
+          <!-- these links are relative paths -->
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="http://patsyklotz.github.io/html5-300-week3/">Week Three</a></li>
+          <li> <a href="javascript/script.js">JavaScript</a></li>
+          <li> <a href="http://www.google.com">Google</a></li>
+        </ul>
+      </nav>
+      <div id="mainContent">
+        <h2>Assignment Four: Map APIs</h3>
+          <!-- A Simple Form    -->
+          <p>Create a web page with a map, either static or slippy, using an API of your choice.</p>  
+      <!--Create a web page with a text area input field. Allow user to choose the location and zoom level.-->
+      <form id="map" style="display:block" name="map">
+        <h2>Create a Google Map</h2>
+        <label for="location-selector">Choose a location:</label>
+        <select id="nav">
+          <option value="http://staticmap.openstreetmap.de/staticmap.php?center=7.653484440856092,-82.60742187500306&zoom=4&size=700x500&markers=8.352476911482936,-79.79492187499585,ltblu-pushpin">Panama, Central America</option>
+          <option value="http://staticmap.openstreetmap.de/staticmap.php?center=41.86177357492641,12.59523515975869&zoom=9&size=700x500&markers=41.88749520790473,12.493268582039079,ltblu-pushpin">Roma, Italia</option>
+          <option value="http://staticmap.openstreetmap.de/staticmap.php?center=-33.556743777987286,-63.59536647796569&zoom=5&size=700x500&markers=8.352476911482936,-79.79492187499585,ltblu-pushpin|-34.63517299256324,-58.40250253677349,ltblu-pushpin">Buenos Aires, South America</option>
+          <option value="http://staticmap.openstreetmap.de/staticmap.php?center=48.42842560348605,-123.40720023960424&zoom=11&size=700x500&markers=48.427984212766575,-123.358448408545,ltblu-pushpin">Victoria, British Columbia</option>
+        </select>
+          <h3>Choose a Location by Geographical Coordinates</h3>
+          <ul>
+            <li>
+              <label id="maplatitude" for="form"></label>
+                Latitude:<input type="text" id="lat" required/>
+            </li>
+            <li>
+              <label id="maplongitude" for="form"></label>
+                Longitude:<input type="text" id="lng" required/>
+            </li>
+            <li>
+              <label id="zoom-level" for="form"></label>
+                Zoom Level:<input type="text" id="zm" required/>
+            </li>
+              <input type="submit" value="Create Custom Map">
+         </form>
+        <!--Open street map image for home page.-->
+        <img src="http://staticmap.openstreetmap.de/staticmap.php?center=7.653484440856092,-82.60742187500306&zoom=4&size=700x500&markers=8.352476911482936,-79.79492187499585,ltblu-pushpin"/>
+          <button type="button" class="runCode">Run</button>
+        <div id="leaflet-map" style="height: 300px"></div>
+        <!--API source links-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+      </div><!-- closing maincContent div tag -->
+    <footer> 
+      <p>&copy; copyright 2016</p>
+    </footer>
+  </body>
+</html>
